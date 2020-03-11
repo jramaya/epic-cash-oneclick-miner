@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/contribute-torque/gui-miner/src/gui"
+	"github.com/jramaya/epic-cash-oneclick-miner/src/gui"
 )
 
 // AppName is injected by the Astilectron packager
