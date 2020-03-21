@@ -337,7 +337,7 @@ func (miner *Xmrig) createConfig(
 			{
 				URL:       poolEndpoint,
 				User:      walletAddress,
-				Pass:      "Torque GUI Miner",
+				Pass:      "Epic Cash GUI Miner",
 				Keepalive: true,
 				Nicehash:  false,
 				Variant:   "xtc",
@@ -376,7 +376,7 @@ func (miner *Xmrig) createGPUConfig(
 			{
 				URL:       poolEndpoint,
 				User:      walletAddress,
-				Pass:      "Torque GUI Miner",
+				Pass:      "Epic Cash GUI Miner",
 				Keepalive: true,
 				Nicehash:  false,
 				Variant:   "xtl",

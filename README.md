@@ -1,6 +1,6 @@
 ![](git-assets/miner-logo.png)
 
-#  Torque GUI Miner
+#  Epic Cash GUI Miner
 
 The Torque GUI miner is a beautiful, easy to use, interface for mining Torque.
 It is aimed at getting people that have never mined Torque into the crypto
