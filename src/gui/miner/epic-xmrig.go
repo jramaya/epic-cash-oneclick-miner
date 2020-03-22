@@ -223,7 +223,7 @@ func NewXmrig(config Config) (*Xmrig, error) {
 // WriteConfig writes the miner's configuration in the xmrig format
 func (miner *Xmrig) WriteConfig(
 	poolEndpoint string,
-	walletAddress string,
+	emailLoginAddress string,
 	processingConfig ProcessingConfig) error {
 
 	var err error
@@ -231,7 +231,7 @@ func (miner *Xmrig) WriteConfig(
 	if miner != nil {
 		defaultConfig := miner.createConfig(
 			poolEndpoint,
-			walletAddress,
+			emailLoginAddress,
 			processingConfig)
 		configBytes, err = json.Marshal(defaultConfig)
 		if err != nil {
@@ -383,7 +383,7 @@ func GetCPUCores() []int {
 // createConfig returns creates the config for Xmrig
 func (miner *Xmrig) createConfig(
 	poolEndpoint string,
-	walletAddress string,
+	emailLoginAddress string,
 	processingConfig ProcessingConfig) XmrigConfig {
 
 	//runInBackground := true
@@ -493,7 +493,7 @@ func (miner *Xmrig) createConfig(
 				Algo:           "randomx/epic",
 				Coin:           nil,
 				URL:            poolEndpoint,
-				User:           walletAddress,
+				User:           emailLoginAddress,
 				Pass:           "x",
 				RigID:          nil,
 				Nicehash:       false,

@@ -183,7 +183,7 @@ let app = {
       }
       // Just make sure they're not using integrated addresses or
       // invalid ones
-      if (shared.validateWalletAddress(configData.address) == false)
+      if (shared.validateEmailLoginAddress(configData.address) == false)
       {
         alert("Please enter a valid Torque address starting with 'Se' or 'SE'");
         return false;
