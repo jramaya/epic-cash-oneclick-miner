@@ -14,17 +14,11 @@ let shared = {
     asticode.modaler.setContent(errDiv);
     asticode.modaler.show();
   },
-  // validateWalletAddress checks if the given address is a valid Torque
+  // validateEmailLoginAddress checks if the given address is a valid Torque
   // wallet address
-  validateWalletAddress: function(address) {
-    /*
-      The regular expression to match the address
-      ^(Se)\d[0-9a-zA-Z]{94}$/
-      was taken from the Bisq pull request
-      https://github.com/bisq-network/bisq-desktop/pull/1307/commits/2b2773e666417b179cc07edc19ede4eba4aa4ab6#diff-7e18464877c4444f041e934dc88a6b3bR437
-    */
-    return true;
-    //return (/^(Se)\d[0-9a-zA-Z]{94}$/.test(address) || /^(SE)[0-9a-zA-Z]{107}$/.test(address));
+  validateEmailLoginAddress: function(address) {
+    re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(address).toLowerCase());
   },
   // bindExternalLinks ensures external links are opened outside of Electron
   bindExternalLinks: function() {
