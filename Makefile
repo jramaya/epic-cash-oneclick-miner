@@ -10,7 +10,7 @@ APP_NAME := $(shell scripts/get_app_name.py)
 default: build
 
 build:
-	cd src/; astilectron-bundler; cp ../linux-miner ../bin/linux-amd64/miner
+	cd src/; astilectron-bundler; cp -r ../linux-miner ../bin/linux-amd64/miner
 
 run: build
 	./bin/linux-amd64/'${APP_NAME}'
