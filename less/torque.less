@@ -10,12 +10,12 @@
 /* Torque colours */
 @color-dark: #000000;
 @color-blue-dark: #0B0C22;
-@color-blue-darker: #00000;
+@color-blue-darker: #000000;
 @color-blue-dark-lighter: #0D112D;
 @color-purple-grey: #8284a5;
 @color-link: #00FFFF;
-@color-stellite-purple: #9012F0;
-@color-stellite-purple-dark: #540C87;
+@color-stellite-gold: rgb(202, 186, 13);
+@color-stellite-gold-dark: #bf9b30;
 @color-selected: #E8D400;
 @color-text: #fafafa;
 
@@ -31,8 +31,8 @@
 @color-notifier-background: #101749;
 @color-notifier-error-background: #491013;
 
-@color-button-default: @color-stellite-purple-dark;
-@color-button-default-hover: @color-stellite-purple;
+@color-button-default: @color-stellite-gold-dark;
+@color-button-default-hover: @color-stellite-gold;
 @color-button-ok: #1D870C;
 @color-button-ok-hover: #229B0F;
 @color-button-cancel: #87330C;
@@ -541,7 +541,7 @@ body.miner {
 
     div.nice-select {
       background-color: @color-dark;
-      border-color: @color-stellite-purple-dark;
+      border-color: @color-stellite-gold-dark;
       height: 28px;
       line-height: 26px;
       ul.list {
@@ -553,7 +553,7 @@ body.miner {
           &:focus,
           &.focus,
           &.selected {
-            background-color: @color-stellite-purple-dark;
+            background-color: @color-stellite-gold-dark;
           }
         }
       }
@@ -621,7 +621,7 @@ body.miner {
           margin-bottom: 20px;
           position: relative;
           cursor: pointer;
-          border: 1px solid @color-stellite-purple-dark;
+          border: 1px solid @color-stellite-gold-dark;
           .border-radius(4px);
           padding: 10px;
           max-width: 75%;
@@ -869,14 +869,14 @@ body.firstrun {
         height: 170px;
         width: 400px;
         color: @color-text;
-        border: 1px solid @color-stellite-purple-dark;
+        border: 1px solid @color-stellite-gold-dark;
         .border-radius(4px);
         display: inline-block;
         max-width: 300px;
         font-size: 18px;
         padding: 10px;
         h3 {
-          color: @color-stellite-purple;
+          color: @color-stellite-gold;
           padding-bottom: 10px;
         }
         p {
@@ -889,7 +889,7 @@ body.firstrun {
         }
 
         &:hover {
-          border: 1px solid @color-stellite-purple;
+          border: 1px solid @color-stellite-gold;
         }
       }
     }
@@ -900,14 +900,14 @@ body.firstrun {
     div.option {
       margin: 15px;
       cursor: pointer;
-      border: 1px solid @color-stellite-purple-dark;
+      border: 1px solid @color-stellite-gold-dark;
       .border-radius(4px);
       display: inline-block;
       max-width: 300px;
       font-size: 18px;
       padding: 10px;
       h3 {
-        color: @color-stellite-purple;
+        color: @color-stellite-gold;
         padding-bottom: 10px;
       }
       p {
@@ -920,7 +920,7 @@ body.firstrun {
       }
 
       &:hover {
-        border: 1px solid @color-stellite-purple;
+        border: 1px solid @color-stellite-gold;
       }
     }
   }
@@ -965,7 +965,7 @@ body.firstrun {
         margin-bottom: 20px;
         position: relative;
         cursor: pointer;
-        border: 1px solid @color-stellite-purple-dark;
+        border: 1px solid @color-stellite-gold-dark;
         .border-radius(4px);
         padding: 10px;
         max-width: 75%;

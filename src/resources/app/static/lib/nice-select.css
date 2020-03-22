@@ -109,7 +109,7 @@
     transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
     z-index: 9; }
     .nice-select .list:hover .option:not(:hover) {
-      background-color: transparent !important; }
+      background-color: black !important; }
   .nice-select .option {
     cursor: pointer;
     font-weight: 400;
@@ -127,7 +127,7 @@
     .nice-select .option.selected {
       font-weight: bold; }
     .nice-select .option.disabled {
-      background-color: transparent;
+      background-color: black;
       color: #999;
       cursor: default; }
 
