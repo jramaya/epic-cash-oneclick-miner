@@ -185,7 +185,7 @@ let app = {
       // invalid ones
       if (shared.validateEmailLoginAddress(configData.address) == false)
       {
-        alert("Please enter a valid Torque address starting with 'Se' or 'SE'");
+        alert("Please enter a valid e-mail");
         return false;
       }
 
