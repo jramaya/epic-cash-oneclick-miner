@@ -1,7 +1,7 @@
 package miner
 
 // SupportedMiners contains a list of the currently supported miners
-var SupportedMiners = []string{"xtc-stak", "xtcrig"}
+var SupportedMiners = []string{"xtc-stak", "epic-xmrig"}
 
 // Config holds miner specific configuration information
 type Config struct {
@@ -22,7 +22,7 @@ type ProcessingConfig struct {
 	// Threads is the amount of CPU threads
 	Threads uint16 `json:"threads"`
 	// MaxThreads is the maximum threads as read by runtime.NumCPU
-	MaxThreads uint16 `json:"max_threads"`
+	MaxThreads []int `json:"max_threads"`
 	// MaxUsage is the maximum CPU usage in percentage the miner should
 	// attempt to use.
 	// Currently only supported by xmrig CPU backend

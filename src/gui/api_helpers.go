@@ -63,7 +63,6 @@ func (gui *GUI) GetStats(
 	poolID int,
 	hashrate float64,
 	mid string) (string, error) {
-
 	if mid == "" || poolID == 0 {
 		return "", errors.New("No data yet")
 	}

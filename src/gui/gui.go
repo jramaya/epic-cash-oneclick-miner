@@ -15,8 +15,8 @@ import (
 	astikit "github.com/asticode/go-astikit"
 	astilectron "github.com/asticode/go-astilectron"
 	bootstrap "github.com/asticode/go-astilectron-bootstrap"
-	"github.com/jramaya/epic-cash-oneclick-miner/src/gui/miner"
 	"github.com/google/uuid"
+	"github.com/jramaya/epic-cash-oneclick-miner/src/gui/miner"
 	"github.com/sirupsen/logrus"
 )
 
@@ -102,7 +102,7 @@ func New(
 		// If frame is false, the window frame is removed. If isDebug is true,
 		// we show the frame to have debugging options available
 		Frame:           astikit.BoolPtr(isDebug),
-		BackgroundColor: astikit.StrPtr("#0B0C22"),
+		BackgroundColor: astikit.StrPtr("#000000"),
 		Center:          astikit.BoolPtr(true),
 		Height:          astikit.IntPtr(700),
 		Width:           astikit.IntPtr(1175),
@@ -447,7 +447,7 @@ func (gui *GUI) configureMiner(command bootstrap.MessageIn) {
 	}
 
 	// The pool API returns the low-end hardware host:port config for pool
-	gui.logger.Debug("Getting pool information")
+	/*gui.logger.Debug("Getting pool information")
 	poolInfo, err := gui.GetPool(gui.config.PoolID)
 	if err != nil {
 		_ = gui.sendElectronCommand("fatal_error", ElectronMessage{
@@ -458,13 +458,14 @@ func (gui *GUI) configureMiner(command bootstrap.MessageIn) {
 		// Give the UI some time to display the message
 		time.Sleep(time.Second * 15)
 		gui.logger.Fatalf("Unable to configure miner: '%s'", err)
-	}
+	}*/
 
 	// Write the config for the specified miner
 	gui.logger.Debug("Writing miner config")
 
 	err = gui.miner.WriteConfig(
-		poolInfo.Config,
+		"51pool.online:5416",
+		//poolInfo.Config,
 		gui.config.Address,
 		miner.ProcessingConfig{
 			Threads:  newConfig.Threads,
@@ -544,9 +545,11 @@ func (gui *GUI) updateNetworkStats() {
 		gui.logger.Warning("No config set yet")
 		return
 	}
-	stats, err := gui.GetStats(gui.config.PoolID, gui.lastHashrate, gui.config.Mid)
-	if err != nil {
-		gui.logger.Warningf("Unable to get network stats: %s", err)
+	//stats, err := gui.GetStats(gui.config.PoolID, gui.lastHashrate, gui.config.Mid)
+	stats := ""
+	//if err != nil {
+	if stats == "" {
+		//gui.logger.Warningf("Unable to get network stats: %s", err)
 	} else {
 		err := bootstrap.SendMessage(gui.window, "network_stats", stats)
 		if err != nil {
